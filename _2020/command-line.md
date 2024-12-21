@@ -257,7 +257,7 @@ tell you about their preferred customizations. Yet another way to learn about
 customizations is to look through other people's dotfiles: you can find tons of
 [dotfiles
 repositories](https://github.com/search?o=desc&q=dotfiles&s=stars&type=Repositories)
-on Github --- see the most popular one
+on GitHub --- see the most popular one
 [here](https://github.com/mathiasbynens/dotfiles) (we advise you not to blindly
 copy configurations though).
 [Here](https://dotfiles.github.io/) is another good resource on the topic.
@@ -352,7 +352,7 @@ cat .ssh/id_ed25519.pub | ssh foobar@remote 'cat >> ~/.ssh/authorized_keys'
 A simpler solution can be achieved with `ssh-copy-id` where available:
 
 ```bash
-ssh-copy-id -i .ssh/id_ed25519.pub foobar@remote
+ssh-copy-id -i .ssh/id_ed25519 foobar@remote
 ```
 
 ## Copying files over SSH
@@ -371,12 +371,12 @@ This is called _port forwarding_ and it
 comes in two flavors: Local Port Forwarding and Remote Port Forwarding (see the pictures for more details, credit of the pictures from [this StackOverflow post](https://unix.stackexchange.com/questions/115897/whats-ssh-port-forwarding-and-whats-the-difference-between-ssh-local-and-remot)).
 
 **Local Port Forwarding**
-![Local Port Forwarding](https://i.stack.imgur.com/a28N8.png  "Local Port Forwarding")
+![Local Port Forwarding](/static/media/images/local-port-forwarding.png)
 
 **Remote Port Forwarding**
-![Remote Port Forwarding](https://i.stack.imgur.com/4iK3b.png  "Remote Port Forwarding")
+![Remote Port Forwarding](/static/media/images/remote-port-forwarding.png)
 
-The most common scenario is local port forwarding, where a service in the remote machine listens in a port and you want to link a port in your local machine to forward to the remote port. For example, if we execute  `jupyter notebook` in the remote server that listens to the port `8888`. Thus, to forward that to the local port `9999`, we would do `ssh -L 9999:localhost:8888 foobar@remote_server` and then navigate to `locahost:9999` in our local machine.
+The most common scenario is local port forwarding, where a service in the remote machine listens in a port and you want to link a port in your local machine to forward to the remote port. For example, if we execute  `jupyter notebook` in the remote server that listens to the port `8888`. Thus, to forward that to the local port `9999`, we would do `ssh -L 9999:localhost:8888 foobar@remote_server` and then navigate to `localhost:9999` in our local machine.
 
 
 ## SSH Configuration
@@ -410,7 +410,7 @@ Server side configuration is usually specified in `/etc/ssh/sshd_config`. Here y
 
 ## Miscellaneous
 
-A common pain when connecting to a remote server are disconnections due to shutting down/sleeping your computer or changing a network. Moreover if one has a connection with significant lag using ssh can become quite frustrating. [Mosh](https://mosh.org/), the mobile shell, improves upon ssh, allowing roaming connections, intermittent connectivity and providing intelligent local echo.
+A common pain when connecting to a remote server are disconnections due to your computer shutting down, going to sleep, or changing networks. Moreover if one has a connection with significant lag using ssh can become quite frustrating. [Mosh](https://mosh.org/), the mobile shell, improves upon ssh, allowing roaming connections, intermittent connectivity and providing intelligent local echo.
 
 Sometimes it is convenient to mount a remote folder. [sshfs](https://github.com/libfuse/sshfs) can mount a folder on a remote server
 locally, and then you can use a local editor.

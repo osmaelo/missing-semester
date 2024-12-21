@@ -46,7 +46,7 @@ While Git admittedly has an ugly interface, its underlying design and ideas are
 beautiful. While an ugly interface has to be _memorized_, a beautiful design
 can be _understood_. For this reason, we give a bottom-up explanation of Git,
 starting with its data model and later covering the command-line interface.
-Once the data model is understood, the commands can be better understood, in
+Once the data model is understood, the commands can be better understood in
 terms of how they manipulate the underlying data model.
 
 # Git's data model
@@ -554,7 +554,11 @@ class website](https://github.com/missing-semester/missing-semester).
 1. Like many command line tools, Git provides a configuration file (or dotfile)
    called `~/.gitconfig`. Create an alias in `~/.gitconfig` so that when you
    run `git graph`, you get the output of `git log --all --graph --decorate
-   --oneline`. Information about git aliases can be found [here](https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias).
+   --oneline`. You can do this by directly
+   [editing](https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias)
+   the `~/.gitconfig` file, or you can use the `git config` command to add the
+   alias. Information about git aliases can be found
+   [here](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
 1. You can define global ignore patterns in `~/.gitignore_global` after running
    `git config --global core.excludesfile ~/.gitignore_global`. Do this, and
    set up your global gitignore file to ignore OS-specific or editor-specific
@@ -563,3 +567,5 @@ class website](https://github.com/missing-semester/missing-semester).
    website](https://github.com/missing-semester/missing-semester), find a typo
    or some other improvement you can make, and submit a pull request on GitHub
    (you may want to look at [this](https://github.com/firstcontributions/first-contributions)).
+   Please only submit PRs that are useful (don't spam us, please!). If you
+   can't find an improvement to make, you can skip this exercise.

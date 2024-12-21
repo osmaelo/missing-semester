@@ -1,6 +1,7 @@
 ---
 layout: page
 title: The Missing Semester of Your CS Education
+nositetitle: true
 ---
 
 Classes teach you all about advanced topics within CS, from operating systems
@@ -52,7 +53,7 @@ YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57
 
 # About the class
 
-**Staff**: This class is co-taught by [Anish](https://www.anishathalye.com/), [Jon](https://thesquareplanet.com/), and [Jose](http://josejg.com/).
+**Staff**: This class is co-taught by [Anish](https://www.anishathalye.com/), [Jon](https://thesquareplanet.com/), and [Jose](http://josejg.com/).<br>
 **Questions**: Email us at [missing-semester@mit.edu](mailto:missing-semester@mit.edu).
 
 # Beyond MIT
@@ -67,6 +68,19 @@ benefit from these resources. You can find posts and discussion on
  - [Twitter](https://twitter.com/jonhoo/status/1224383452591509507)
  - [YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J)
 
+{% comment %}
+Some more URLs:
+
+- https://news.ycombinator.com/item?id=27154577
+- https://news.ycombinator.com/item?id=34934216
+- https://www.reddit.com/r/learnprogramming/comments/nca1v3/mit_the_missing_semester_of_your_cs_education/
+- https://www.reddit.com/r/compsci/comments/eyywv8/the_missing_semester_of_your_cs_education_from_mit/
+- https://www.reddit.com/r/programming/comments/io7nq3/the_missing_semester_of_your_cs_education_mit/
+- https://twitter.com/MIT_CSAIL/status/1349766980413263873
+- https://twitter.com/MIT_CSAIL/status/1481676163491659780
+- https://twitter.com/MIT_CSAIL/status/1581313961093484545
+{% endcomment %}
+
 # Translations
 
 - [Chinese (Simplified)](https://missing-semester-cn.github.io/)
@@ -79,6 +93,11 @@ benefit from these resources. You can find posts and discussion on
 - [Spanish](https://missing-semester-esp.github.io/)
 - [Turkish](https://missing-semester-tr.github.io/)
 - [Vietnamese](https://missing-semester-vn.github.io/)
+- [Arabic](https://missing-semester-ar.github.io/)
+- [Italian](https://missing-semester-it.github.io/)
+- [Persian](https://missing-semester-fa.github.io/)
+- [German](https://missing-semester-de.github.io/)
+- [Bengali](https://missing-semester-bn.github.io/)
 
 Note: these are external links to community translations. We have not vetted
 them.
