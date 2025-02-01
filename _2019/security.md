@@ -39,7 +39,7 @@ for more suggestions.
 ## General Security Advice
 
 Tech Solidarity has a pretty great list of [do's and don'ts for
-journalists](https://techsolidarity.org/resources/basic_security.htm)
+journalists](https://web.archive.org/web/20221123204419/https://techsolidarity.org/resources/basic_security.htm)
 that has a lot of sane advice, and is decently up-to-date. [@thegrugq](https://medium.com/@thegrugq)
 also has a good blog post on [travel security
 advice](https://medium.com/@thegrugq/stop-fabricating-travel-security-advice-35259bf0e869)
@@ -56,7 +56,7 @@ a password manager. Some good ones are:
  - [1password](https://1password.com/)
  - [KeePass](https://keepass.info/)
  - [BitWarden](https://bitwarden.com/)
- - [`pass`](https://www.passwordstore.org/)
+ - [`pass`](https://git.zx2c4.com/password-store/about/)
 
 If you're particularly paranoid, use one that encrypts the passwords
 locally on your computer, as opposed to storing them in plain-text at
@@ -174,8 +174,7 @@ SSL/TLS is
 [critical](https://www.troyhunt.com/ssl-is-not-about-encryption/), and
 it's _not_ just about encryption, but also about being able to verify
 that you're talking to the right service in the first place! If you run
-your own web server, [test it](https://ssldecoder.eu/) and [test it
-again](https://www.ssllabs.com/ssltest/index.html). TLS configuration
+your own web server, [test it](https://www.ssllabs.com/ssltest/index.html). TLS configuration
 [can get hairy](https://wiki.mozilla.org/Security/Server_Side_TLS).
 HTTPS Everywhere will do its very best to never navigate you to HTTP
 sites when there's an alternative. That doesn't save you, but it helps.

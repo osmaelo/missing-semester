@@ -17,7 +17,7 @@ However, in many scenarios you will want to perform a series of commands and mak
 
 Shell scripts are the next step in complexity.
 Most shells have their own scripting language with variables, control flow and its own syntax.
-What makes shell scripting different from other scripting programming language is that it is optimized for performing shell-related tasks.
+What makes shell scripting different from other scripting programming languages is that it is optimized for performing shell-related tasks.
 Thus, creating command pipelines, saving results into files, and reading from standard input are primitives in shell scripting, which makes it easier to use than general purpose scripting languages.
 For this section we will focus on bash scripting since it is the most common.
 
@@ -56,7 +56,7 @@ Unlike other scripting languages, bash uses a variety of special variables to re
 - `$?` - Return code of the previous command
 - `$$` - Process identification number (PID) for the current script
 - `!!` - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing `sudo !!`
-- `$_` - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing `Esc` followed by `.`
+- `$_` - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing `Esc` followed by `.` or `Alt+.`
 
 Commands will often return output using `STDOUT`, errors through `STDERR`, and a Return Code to report errors in a more script-friendly manner.
 The return code or exit status is the way scripts/commands have to communicate how execution went.
@@ -186,7 +186,7 @@ For interactive tools such as the ones based on ncurses, help for the commands c
 
 Sometimes manpages can provide overly detailed descriptions of the commands, making it hard to decipher what flags/syntax to use for common use cases.
 [TLDR pages](https://tldr.sh/) are a nifty complementary solution that focuses on giving example use cases of a command so you can quickly figure out which options to use.
-For instance, I find myself referring back to the tldr pages for [`tar`](https://tldr.ostera.io/tar) and [`ffmpeg`](https://tldr.ostera.io/ffmpeg) way more often than the manpages.
+For instance, I find myself referring back to the tldr pages for [`tar`](https://tldr.inbrowser.app/pages/common/tar) and [`ffmpeg`](https://tldr.inbrowser.app/pages/common/ffmpeg) way more often than the manpages.
 
 
 ## Finding files
@@ -241,14 +241,14 @@ Some I frequently use are `-C` for getting **C**ontext around the matching line 
 When it comes to quickly searching through many files, you want to use `-R` since it will **R**ecursively go into directories and look for files for the matching string.
 
 But `grep -R` can be improved in many ways, such as ignoring `.git` folders, using multi CPU support, &c.
-Many `grep` alternatives have been developed, including [ack](https://beyondgrep.com/), [ag](https://github.com/ggreer/the_silver_searcher) and [rg](https://github.com/BurntSushi/ripgrep).
+Many `grep` alternatives have been developed, including [ack](https://github.com/beyondgrep/ack3), [ag](https://github.com/ggreer/the_silver_searcher) and [rg](https://github.com/BurntSushi/ripgrep).
 All of them are fantastic and pretty much provide the same functionality.
 For now I am sticking with ripgrep (`rg`), given how fast and intuitive it is. Some examples:
 ```bash
 # Find all python files where I used the requests library
 rg -t py 'import requests'
 # Find all files (including hidden files) without a shebang line
-rg -u --files-without-match "^#!"
+rg -u --files-without-match "^#\!"
 # Find all matches of foo and print the following 5 lines
 rg foo -A 5
 # Print statistics of matches (# of matched lines and files )
@@ -281,7 +281,7 @@ It can be enabled in [zsh](https://github.com/zsh-users/zsh-autosuggestions) and
 
 You can modify your shell's history behavior, like preventing commands with a leading space from being included. This comes in handy when you are typing commands with passwords or other bits of sensitive information.
 To do this, add `HISTCONTROL=ignorespace` to your `.bashrc` or `setopt HIST_IGNORE_SPACE` to your `.zshrc`.
-If you make the mistake of not adding the leading space, you can always manually remove the entry by editing your `.bash_history` or `.zhistory`.
+If you make the mistake of not adding the leading space, you can always manually remove the entry by editing your `.bash_history` or `.zsh_history`.
 
 ## Directory Navigation
 
